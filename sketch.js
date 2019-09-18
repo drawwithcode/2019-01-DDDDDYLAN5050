@@ -3,9 +3,19 @@ function preload(){
 }
 
 function setup() {
+  createCanvas(windowWidth,windowHeight);
+  //background(20);
+  angleMode(DEGREES);
+  noFill();
+  colorMode(HSB);
   // put setup code here
 }
 
 function draw() {
-  // put drawing code here
+
+  stroke(mouseX/800*255,mouseY/600*255,240);
+  fill(50);
+  if (mouseIsPressed){
+    line(pmouseX,pmouseY,mouseX,mouseY);
+    }
 }
